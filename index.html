@@ -4,129 +4,241 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Porto</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	</head>
+
 	<body>
 		<header>
-			<nav>
-				<ul>
-					<li>
-						<button>o</button>
-					</li>
+			<div class="container">	
+				<nav class="navegacao">
+					<div class="topo">
+						<a href="" class="logo-principal"><img src="imagens/logo.png"></a>
 
-					<li>
-						<a href="">ELEMENTS</a>
-						<ul>
-							<li>
-								<h4>Elements 1</h4>
-								<ul>
-									<li><a href="">Accordions</a></li>
-									<li><a href="">Alerts</a></li>
-									<li><a href="">Animations</a></li>
-									<li><a href="">Arrows</a></li>
-									<li><a href="">Badges</a></li>
-									<li><a href="">Before / After</a></li>
-									<li><a href="">Blockquotes</a></li>
-									<li><a href="">Buttons</a></li>
-									<li><a href="">Call to Action</a></li>
-									<li><a href="">Cards</a></li>
-									<li><a href="">Carousels</a></li>
-									<li><a href="">Cascading Images</a></li>
-								</ul>
-							</li>
-							<li>
-								<h4>Elements 2</h4>
-								<ul>
-									<li><a href="">Accordions</a></li>
-									<li><a href="">Alerts</a></li>
-									<li><a href="">Animations</a></li>
-									<li><a href="">Arrows</a></li>
-									<li><a href="">Badges</a></li>
-									<li><a href="">Before / After</a></li>
-									<li><a href="">Blockquotes</a></li>
-									<li><a href="">Buttons</a></li>
-									<li><a href="">Call to Action</a></li>
-									<li><a href="">Cards</a></li>
-									<li><a href="">Carousels</a></li>
-									<li><a href="">Cascading Images</a></li>
-								</ul>
-							</li>
-							<li>
-								<h4>Elements 3</h4>
-								<ul>
-									<li><a href="">Accordions</a></li>
-									<li><a href="">Alerts</a></li>
-									<li><a href="">Animations</a></li>
-									<li><a href="">Arrows</a></li>
-									<li><a href="">Badges</a></li>
-									<li><a href="">Before / After</a></li>
-									<li><a href="">Blockquotes</a></li>
-									<li><a href="">Buttons</a></li>
-									<li><a href="">Call to Action</a></li>
-									<li><a href="">Cards</a></li>
-									<li><a href="">Carousels</a></li>
-									<li><a href="">Cascading Images</a></li>
-								</ul>
-							</li>
-							<li>
-								<h4>Elements 4</h4>
-								<ul>
-									<li><a href="">Accordions</a></li>
-									<li><a href="">Alerts</a></li>
-									<li><a href="">Animations</a></li>
-									<li><a href="">Arrows</a></li>
-									<li><a href="">Badges</a></li>
-									<li><a href="">Before / After</a></li>
-									<li><a href="">Blockquotes</a></li>
-									<li><a href="">Buttons</a></li>
-									<li><a href="">Call to Action</a></li>
-									<li><a href="">Cards</a></li>
-									<li><a href="">Carousels</a></li>
-									<li><a href="">Cascading Images</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
+						<div class="botoes">
+							<div class="pesquisa">	
+								<div class="campo">
+									<input type="" name="">
+									<button class="close">
+										<i class="fa-solid fa-xmark"></i>
+									</button>
+									
+								</div>
+								<button class="btn-pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
+								
+							</div>
+							
+							<a href="" class="btn-compra"><i class="fa-solid fa-bag-shopping"></i></a>
 
-					<li>
-						<a href="">FEATURES</a>
-						<ul>
-							<li><a href="">Headers</a></li>
-							<li><a href="">Navigations</a></li>
-							<li><a href="">Page Headers</a></li>
-							<li><a href="">Footers</a></li>
-							<li><a href="">Admin Extension</a></li>
-							<li><a href="">Sliders</a></li>
-							<li><a href="">Layout Options</a></li>
-							<li><a href="">Extra</a></li>
-							<li><a href="">GDPR</a></li>
-						</ul>
-					</li>
+							<button class="btn-hamburguer"><i class="fa-solid fa-bars"></i></button>
+						</div>
+					</div>
+					
+					<ul class="menu">
+						<li>
+							<div class="titulo">
+								<a href="" class="texto">HOME</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
 
-					<li>
-						<a href="">PAGES</a>
-					</li>
+							<ul class="sub-menu">
+								<li><a href="">Headers</a></li>
+								<li><a href="">Navigations</a></li>
+								<li><a href="">Page Headers</a></li>
+								<li><a href="">Footers</a></li>
+								<li><a href="">Admin Extension</a></li>
+								<li><a href="">Sliders</a></li>
+								<li><a href="">Layout Options</a></li>
+								<li><a href="">Extra</a></li>
+								<li><a href="">GDPR</a></li>
+							</ul>
+						</li>
 
-					<li>
-						<a href="">LOGO</a>
-					</li>
+						<li>
+							<div class="titulo">
+								<a href="" class="texto">ELEMENTS</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
+							
+							<ul class="sub-menu">
+								<li>
+									<h4>Elements 1</h4>
+									<ul>
+										<li><a href="">Accordions</a></li>
+										<li><a href="">Alerts</a></li>
+										<li><a href="">Animations</a></li>
+										<li><a href="">Arrows</a></li>
+										<li><a href="">Badges</a></li>
+										<li><a href="">Before / After</a></li>
+										<li><a href="">Blockquotes</a></li>
+										<li><a href="">Buttons</a></li>
+										<li><a href="">Call to Action</a></li>
+										<li><a href="">Cards</a></li>
+										<li><a href="">Carousels</a></li>
+										<li><a href="">Cascading Images</a></li>
+									</ul>
+								</li>
+								<li>
+									<h4>Elements 2</h4>
+									<ul>
+										<li><a href="">Accordions</a></li>
+										<li><a href="">Alerts</a></li>
+										<li><a href="">Animations</a></li>
+										<li><a href="">Arrows</a></li>
+										<li><a href="">Badges</a></li>
+										<li><a href="">Before / After</a></li>
+										<li><a href="">Blockquotes</a></li>
+										<li><a href="">Buttons</a></li>
+										<li><a href="">Call to Action</a></li>
+										<li><a href="">Cards</a></li>
+										<li><a href="">Carousels</a></li>
+										<li><a href="">Cascading Images</a></li>
+									</ul>
+								</li>
+								<li>
+									<h4>Elements 3</h4>
+									<ul>
+										<li><a href="">Accordions</a></li>
+										<li><a href="">Alerts</a></li>
+										<li><a href="">Animations</a></li>
+										<li><a href="">Arrows</a></li>
+										<li><a href="">Badges</a></li>
+										<li><a href="">Before / After</a></li>
+										<li><a href="">Blockquotes</a></li>
+										<li><a href="">Buttons</a></li>
+										<li><a href="">Call to Action</a></li>
+										<li><a href="">Cards</a></li>
+										<li><a href="">Carousels</a></li>
+										<li><a href="">Cascading Images</a></li>
+									</ul>
+								</li>
+								<li>
+									<h4>Elements 4</h4>
+									<ul>
+										<li><a href="">Accordions</a></li>
+										<li><a href="">Alerts</a></li>
+										<li><a href="">Animations</a></li>
+										<li><a href="">Arrows</a></li>
+										<li><a href="">Badges</a></li>
+										<li><a href="">Before / After</a></li>
+										<li><a href="">Blockquotes</a></li>
+										<li><a href="">Buttons</a></li>
+										<li><a href="">Call to Action</a></li>
+										<li><a href="">Cards</a></li>
+										<li><a href="">Carousels</a></li>
+										<li><a href="">Cascading Images</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
 
-					<li>
-						<a href="">PORTFOLIO</a>
-					</li>
+						<li>
+							<div class="titulo principal">
+								<a href="" class="texto">FEATURES</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
 
-					<li>
-						<a href="">BLOG</a>
-					</li>
+							<ul class="sub-menu">
+								<li><a href="">Headers</a></li>
+								<li><a href="">Navigations</a></li>
+								<li><a href="">Page Headers</a></li>
+								<li><a href="">Footers</a></li>
+								<li><a href="">Admin Extension</a></li>
+								<li><a href="">Sliders</a></li>
+								<li><a href="">Layout Options</a></li>
+								<li><a href="">Extra</a></li>
+								<li><a href="">GDPR</a></li>
+							</ul>
+						</li>
 
-					<li>
-						<a href="">SHOP</a>
-					</li>
+						<li>
+							<div class="titulo">
+								<a href="" class="texto">PAGES</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
+							
+							<ul class="sub-menu">
+								<li><a href="">Headers</a></li>
+								<li><a href="">Navigations</a></li>
+								<li><a href="">Page Headers</a></li>
+								<li><a href="">Footers</a></li>
+								<li><a href="">Admin Extension</a></li>
+								<li><a href="">Sliders</a></li>
+								<li><a href="">Layout Options</a></li>
+								<li><a href="">Extra</a></li>
+								<li><a href="">GDPR</a></li>
+							</ul>
+						</li>
+					
+						<li class="logo-menu">
+							<a href=""><img src="imagens/logo.png"></a>
+						</li>
 
-					<li>
-						<a href="">C</a>
-					</li>
-				</ul>
-			</nav>
+						<li>
+							<div class="titulo">
+								<a href="" class="texto">PORTFOLIO</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
+							
+							<ul class="sub-menu">
+								<li><a href="">Headers</a></li>
+								<li><a href="">Navigations</a></li>
+								<li><a href="">Page Headers</a></li>
+								<li><a href="">Footers</a></li>
+								<li><a href="">Admin Extension</a></li>
+								<li><a href="">Sliders</a></li>
+								<li><a href="">Layout Options</a></li>
+								<li><a href="">Extra</a></li>
+								<li><a href="">GDPR</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<div class="titulo">
+								<a href="" class="texto">BLOG</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
+
+							<ul class="sub-menu">
+								<li><a href="">Headers</a></li>
+								<li><a href="">Navigations</a></li>
+								<li><a href="">Page Headers</a></li>
+								<li><a href="">Footers</a></li>
+								<li><a href="">Admin Extension</a></li>
+								<li><a href="">Sliders</a></li>
+								<li><a href="">Layout Options</a></li>
+								<li><a href="">Extra</a></li>
+								<li><a href="">GDPR</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<div class="titulo">
+								<a href="" class="texto">SHOP</a>
+								<a href="" class="icone"><i class="fa-solid fa-angle-down"></i></a>
+							</div>
+
+							<ul class="sub-menu">
+								<li><a href="">Headers</a></li>
+								<li><a href="">Navigations</a></li>
+								<li><a href="">Page Headers</a></li>
+								<li><a href="">Footers</a></li>
+								<li><a href="">Admin Extension</a></li>
+								<li><a href="">Sliders</a></li>
+								<li><a href="">Layout Options</a></li>
+								<li><a href="">Extra</a></li>
+								<li><a href="">GDPR</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 
 		<main>

@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	bottom: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	border: none;
+	box-sizing: border-box;
+}
+
+header {
+	height: auto;
+	display: relative;
+	overflow: hidden;
+}
+
+.logo-principal img {
+	width: 100px;
+}
+
+.topo {
+	display: flex;
+	padding: 40px 0;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sub-menu, .logo-menu {
+	display: none;
+}
+
+/*Menu*/
+
+.menu::-webkit-scrollbar {
+	display: none;
+}
+
+.menu {
+	padding: 0;
+	border: 1px solid red;
+	overflow-y: scroll;
+	max-height: 390px;
+}
+
+.menu .titulo {
+	display: flex;
+	padding: 0;
+}
+
+.menu .titulo .texto{
+	color: #3251FC;
+	font-size: 13px;
+	font-weight: 700;
+	display: block;
+	padding: 7px;
+	width: 100%;
+}
+
+.menu .titulo .icone{
+	width: 30px;
+	color: #3251FC;
+	display: flex;
+}
+
+.menu .titulo .icone i{
+	margin: auto;
+	
+}
+
+.menu .titulo.principal {
+	background: #3251FC;
+}
+
+.menu .titulo.principal .texto, .menu .titulo.principal .icone{
+	color: white;
+}
+
+.botoes {
+	display: flex;
+	align-items: center;
+}
+
+.btn-hamburguer {
+	background: #3251FC;
+	color: white;
+	padding: 9px 14px 8px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.botoes .btn-pesquisa, .botoes .btn-compra {
+	color: #444;
+	background: transparent;
+	cursor: pointer;
+	margin-right: 25px;
+}
+
+.botoes .pesquisa {
+	display: flex;
+}
+
+.botoes .pesquisa .campo {
+	display: none;
+}
+
+.botoes .pesquisa.active .campo {
+	display: flex;
+	padding: 0;
+	position: relative;
+	margin-right: 20px;
+	border: 1px solid blue;
+}
+
+.botoes .pesquisa.active .campo .close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 12px;
+}
+
+.botoes .pesquisa.active .campo input {
+	right: 75px;
+	width: 200px;
+	font-size: 12px;
+}
+
+.botoes .pesquisa.active .campo input:focus {
+	border: none;
+	outline: 0;
+}
