@@ -280,6 +280,116 @@ header {
 	font-size: 11px;
 }
 
+/*Seção 4*/
+
+.secao-4 {
+	text-align: center;
+	color: #212529;
+}
+
+.secao-4 .container {
+	display: grid;
+	grid-row-gap: 40px;
+}
+
+.secao-4 .titulo {
+	font-size: 24px;
+	margin-bottom: 17px;
+}
+
+.secao-4 h3 {
+	font-size: 15px;
+	font-weight: 400;
+	color: #777;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+
+.secao-4 p {
+	font-size: 12px;
+	color: #777;
+	line-height: 25px;
+	margin-bottom: 40px;
+}
+
+.secao-4 .btn {
+	color: white;
+	font-size: 12px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 13px 25px;
+	border-radius: 6px;
+	transition: .2s;
+	background: #212529;
+}
+
+.secao-4 .btn:hover {
+	background: #32383e;
+}
+
+.secao-4 .btn i {
+	margin-left: 10px;
+}
+
+.secao-4 .img {
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+/*Seção 5*/
+
+.secao-5 {
+	text-align: center;
+	color: #212529;
+	padding: 70px 0;
+}
+
+.secao-5 h3 {
+	font-size: 23px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	line-height: 38px;
+}
+
+.secao-5 h3 span {
+	font-weight: 800;
+}
+
+.secao-5 p {
+	font-size: 13px;
+	color: #777;
+	margin-top: 5px;
+}
+
+.secao-5 .btn {
+	margin-top: 22px;
+	color: white;
+	font-size: 13px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 9px 25px;
+	border-radius: 5px;
+	transition: .2s;
+	background: #3251FC;
+	position: relative;
+}
+
+.secao-5 .btn:hover {
+	background: #5871fd;
+}
+
+.secao-5 .btn .preco {
+	position: absolute;
+	font-size: 10px;
+	background: #212529;
+	padding: 0px 8px;
+	display: block;
+	border-radius: 10px;
+	bottom: 28px;
+	right: -7px;
+}
+
 /*Seção 6*/
 
 .secao-6 {
@@ -318,6 +428,7 @@ header {
 	font-size: 15px;
 	margin-bottom: 5px;
 	letter-spacing: -1px;
+	color: #212529;
 }
 
 .secao-6 .card .texto p {
