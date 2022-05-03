@@ -197,6 +197,7 @@ header {
 .secao-1 .container {
 	display: grid;
 	grid-row-gap: 15px;
+	padding-bottom: 15px;
 }
 
 .secao-1 .card {
@@ -280,6 +281,60 @@ header {
 	font-size: 11px;
 }
 
+/*Seção 2*/
+
+.secao-2 {
+	color: white;
+	background: #3251FC;
+	padding: 80px 0;
+	text-align: center;
+}
+
+.secao-2 .container {
+	display: grid;
+	grid-row-gap: 30px;
+}
+
+.secao-2 .carousel .titulo {
+	font-size: 10px;
+	font-weight: 400;
+}
+
+.secao-2 .carousel .carousel-item .numero {
+	font-size: 50px;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	padding: 0px;
+}
+
+.secao-2 .carousel .carousel-item .numero span {
+	font-size: 25px;
+	margin-top: 11px;
+	font-weight: 600;
+	margin-left: 2px;
+}
+
+.secao-2 .carousel .carousel-item p {
+	font-size: 13px;
+	font-weight: 400;
+	margin-top: -5px;
+}
+
+.secao-2 .textos h2 {
+	font-size: 26px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+}
+
+.secao-2 .textos p {
+	font-size: 13px;
+	color: #ccc;
+	line-height: 25px;
+	margin-bottom: 25px;
+}
+
 /*Seção 4*/
 
 .secao-4 {
@@ -312,7 +367,7 @@ header {
 	margin-bottom: 40px;
 }
 
-.secao-4 .btn {
+.secao-4 .btn, .secao-2 .btn {
 	color: white;
 	font-size: 12px;
 	font-weight: 700;
@@ -323,11 +378,11 @@ header {
 	background: #212529;
 }
 
-.secao-4 .btn:hover {
+.secao-4 .btn:hover, .secao-2 .btn:hover {
 	background: #32383e;
 }
 
-.secao-4 .btn i {
+.secao-4 .btn i, .secao-2 .btn i {
 	margin-left: 10px;
 }
 
