@@ -11,6 +11,9 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+		<link rel="stylesheet" type="text/css" href="carousel/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="carousel/owl.theme.css">
+
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	</head>
 
@@ -681,12 +684,33 @@
 			<section class="secao-2">
 				<div class="container">
 
-					<div class="carousel">
+					<div class="secao-2-carousel">
 						<h4 class="titulo">PORTO IN NUMBERS</h4>
-						<div class="carousel-item">
-							<h3 class="numero">100<span>%</span></h3>
-							<p>Percent of happy users using Porto</p>
+
+						<div class="owl-carousel owl-theme">
+							<div class="item">
+								<h3 class="numero">100<span>%</span></h3>
+								<p>Percent of happy users using Porto</p>
+							</div>
+
+							<div class="item flex">
+								<h3 class="numero">50<span>+</span></h3>
+								<p>Projects made with total success</p>
+							</div>
+
+							<div class="item">
+								<h3 class="numero">350<span>+</span></h3>
+								<p>Number of clients around world</p>
+							</div>
 						</div>
+
+						<button id="btn-left" class="btn-left">
+							<i class="fa-solid fa-angle-left"></i>
+						</button>
+
+						<button id="btn-right" class="btn-right">
+							<i class="fa-solid fa-angle-right"></i>
+						</button>
 					</div>
 
 					<div class="textos">
@@ -700,7 +724,7 @@
 				</div>
 			</section>
 
-			<section class="secao-3">
+			<section class="secao-3" style="display: none;">
 				<div class="container">
 					<div class="card">
 						<div>
@@ -907,6 +931,8 @@
 			</div>
 		</footer>
 
+		<script src="js/jquery.js"></script>
+		<script src="carousel/carousel.js"></script>
 		<script src="js/index.js"></script>
 	</body>
 </html>

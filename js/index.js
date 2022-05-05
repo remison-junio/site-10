@@ -44,3 +44,28 @@ pesquisaClose.addEventListener('click', (e)=> {
 	pesquisaInput.focus()
 	
 })
+
+//Carousel
+
+const owl = $('.owl-carousel');
+
+$(document).ready(()=>{
+	owl.owlCarousel({
+	    loop:true,
+	    margin:10,
+	    nav:false,
+	    responsive:{
+	        0:{
+	            items:1
+	        }
+	    }
+	})
+
+	$('#btn-right').on('click', ()=>{
+		owl.trigger('next.owl.carousel');
+	})
+
+	$('#btn-left').on('click', ()=>{
+		owl.trigger('prev.owl.carousel');
+	})
+})

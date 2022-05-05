@@ -290,17 +290,30 @@ header {
 	text-align: center;
 }
 
-.secao-2 .container {
-	display: grid;
-	grid-row-gap: 30px;
+.secao-2-carousel {
+	margin-bottom: 20px;
+	position: relative;
 }
 
-.secao-2 .carousel .titulo {
+.secao-2 .flex {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.secao-2 .flex p {
+	position: relative;
+	bottom: 15px;
+}
+
+.secao-2 .secao-2-carousel .titulo {
 	font-size: 10px;
 	font-weight: 400;
+	color: #E6E6E6;
+	opacity: .7;
 }
 
-.secao-2 .carousel .carousel-item .numero {
+.secao-2 .secao-2-carousel .item .numero {
 	font-size: 50px;
 	font-weight: 700;
 	display: flex;
@@ -308,17 +321,38 @@ header {
 	padding: 0px;
 }
 
-.secao-2 .carousel .carousel-item .numero span {
+.secao-2 .secao-2-carousel .item .numero span {
 	font-size: 25px;
 	margin-top: 11px;
 	font-weight: 600;
 	margin-left: 2px;
 }
 
-.secao-2 .carousel .carousel-item p {
+.secao-2 .secao-2-carousel .item p {
 	font-size: 13px;
 	font-weight: 400;
 	margin-top: -5px;
+}
+
+.secao-2 .secao-2-carousel .btn-right, .secao-2 .secao-2-carousel .btn-left {
+	padding: 0px 10px;
+	position: absolute;
+	bottom: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	z-index: 1000;
+	background: transparent;
+	color: white;
+	font-size: 25px;
+}
+
+.secao-2 .secao-2-carousel .btn-right {
+	right: 0;
+}
+
+.secao-2 .secao-2-carousel .btn-left {
+	left: 0;
 }
 
 .secao-2 .textos h2 {
@@ -340,6 +374,7 @@ header {
 .secao-4 {
 	text-align: center;
 	color: #212529;
+	padding-top: 80px;
 }
 
 .secao-4 .container {
@@ -535,7 +570,6 @@ header {
 
 footer {
 	background: #212529;
-	padding: 0 10px;
 }
 
 .logo-footer {
@@ -588,8 +622,11 @@ footer .nav-footer a, footer .contatos .email {
 
 footer .nav-footer a:hover {
 	color: white;
-	font-weight: 400;
 	margin-left: 2px;
+}
+
+footer .contatos .email:hover {
+	color: white;
 }
 
 footer .nav-footer i, footer .contatos i {
