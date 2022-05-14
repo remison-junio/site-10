@@ -62,10 +62,33 @@ $(document).ready(()=>{
 	})
 
 	$('#btn-right').on('click', ()=>{
-		owl.trigger('next.owl.carousel');
+		owl.trigger('next.owl.carousel')
 	})
 
 	$('#btn-left').on('click', ()=>{
-		owl.trigger('prev.owl.carousel');
+		owl.trigger('prev.owl.carousel')
 	})
 })
+
+//DropDown menu
+
+const ativarDropdown = function() {
+    let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    if (w >= 998) {
+
+        let btnDrop = document.querySelectorAll('.menu .item')
+        btnDrop.forEach((item, i) => {
+        	item.addEventListener('mouseenter', ()=>{
+        		subMenu[i].classList.add('active')
+        	})
+
+        	item.addEventListener('mouseleave', ()=> {
+        		subMenu[i].classList.remove('active')
+        	})
+        }) 
+    }
+}
+
+ativarDropdown()
+
+window.onresize = ativarDropdown
