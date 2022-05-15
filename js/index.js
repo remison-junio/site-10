@@ -73,22 +73,37 @@ $(document).ready(()=>{
 //DropDown menu
 
 const ativarDropdown = function() {
-    let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
-    if (w >= 998) {
+    let tamanhoTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    if (tamanhoTela >= 998) {
 
         let btnDrop = document.querySelectorAll('.menu .item')
         btnDrop.forEach((item, i) => {
         	item.addEventListener('mouseenter', ()=>{
-        		subMenu[i].classList.add('active')
+        		subMenu[i].classList.add('drop')
         	})
 
         	item.addEventListener('mouseleave', ()=> {
-        		subMenu[i].classList.remove('active')
+        		subMenu[i].classList.remove('drop')
         	})
-        }) 
+        })
     }
 }
 
 ativarDropdown()
 
 window.onresize = ativarDropdown
+
+//Botão ir ao topo 
+
+const btnAoTopo = document.querySelector('.btn-aoTopo')
+
+document.addEventListener('scroll', (e)=> {
+	let posicao = window.pageYOffset
+	if(posicao > 100) {
+		btnAoTopo.classList.add('visible')
+	} else {
+		btnAoTopo.classList.remove('visible')
+	}
+})
+
+btnAoTopo.addEventListener('click', ()=> $('html, body').animate({scrollTop:0}, 'slow'))
