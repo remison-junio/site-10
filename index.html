@@ -44,7 +44,7 @@
 					</div>
 					
 					<ul class="menu">
-						<li class="item">
+						<li class="item item-home">
 							<div class="titulo">
 								<a href="" class="texto">HOME</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
@@ -110,11 +110,11 @@
 
 						<li class="item">
 							<div class="titulo">
-								<a href="" class="texto">ELEMENTS</a>
+								<a href="" class="texto btn-drop">ELEMENTS</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
 							</div>
 							
-							<ul class="sub-menu">
+							<ul class="sub-menu grid">
 								<li>
 									<h4>Elements 1</h4>
 									<ul class="sub-menu-sub">
@@ -308,7 +308,7 @@
 
 						<li class="item">
 							<div class="titulo principal">
-								<a href="" class="texto">FEATURES</a>
+								<a href="" class="texto  btn-drop">FEATURES</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
 							</div>
 
@@ -372,7 +372,7 @@
 
 						<li class="item">
 							<div class="titulo">
-								<a href="" class="texto">PAGES</a>
+								<a href="" class="texto btn-drop">PAGES</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
 							</div>
 							
@@ -440,7 +440,7 @@
 
 						<li class="item">
 							<div class="titulo">
-								<a href="" class="texto">PORTFOLIO</a>
+								<a href="" class="texto btn-drop">PORTFOLIO</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
 							</div>
 							
@@ -504,7 +504,7 @@
 
 						<li class="item">
 							<div class="titulo">
-								<a href="" class="texto">BLOG</a>
+								<a href="" class="texto btn-drop">BLOG</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
 							</div>
 
@@ -568,7 +568,7 @@
 
 						<li class="item">
 							<div class="titulo">
-								<a href="" class="texto">SHOP</a>
+								<a href="" class="texto btn-drop">SHOP</a>
 								<a href="" class="icone btn-sub"><i class="fa-solid fa-angle-down"></i></a>
 							</div>
 
@@ -630,13 +630,17 @@
 							</ul>
 						</li>
 					</ul>
+
+					<div class="compra-mobile">
+						<a href="" class="btn-compra"><i class="fa-solid fa-bag-shopping"></i></a>
+					</div>
+
 				</nav>
 			</div>
 		</header>
 
 		<main>
 			<section class="secao-1">
-				<div class="container">
 					<div class="card">
 						<img class="img" src="imagens/galeria-1.jpg">
 						<div class="texto">
@@ -678,39 +682,39 @@
 							<a href="">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
-				</div>
 			</section>
 
 			<section class="secao-2">
 				<div class="container">
+					<div class="carousel-pai">
+						<div class="secao-2-carousel">
+							<h4 class="titulo">PORTO IN NUMBERS</h4>
 
-					<div class="secao-2-carousel">
-						<h4 class="titulo">PORTO IN NUMBERS</h4>
+							<div class="owl-carousel owl-theme">
+								<div class="item">
+									<h3 class="numero">100<span>%</span></h3>
+									<p>Percent of happy users using Porto</p>
+								</div>
 
-						<div class="owl-carousel owl-theme">
-							<div class="item">
-								<h3 class="numero">100<span>%</span></h3>
-								<p>Percent of happy users using Porto</p>
+								<div class="item">
+									<h3 class="numero">50<span>+</span></h3>
+									<p>Projects made with total success</p>
+								</div>
+
+								<div class="item">
+									<h3 class="numero">350<span>+</span></h3>
+									<p>Number of clients around world</p>
+								</div>
 							</div>
 
-							<div class="item flex">
-								<h3 class="numero">50<span>+</span></h3>
-								<p>Projects made with total success</p>
-							</div>
+							<button id="btn-left" class="btn-left">
+								<i class="fa-solid fa-angle-left"></i>
+							</button>
 
-							<div class="item">
-								<h3 class="numero">350<span>+</span></h3>
-								<p>Number of clients around world</p>
-							</div>
+							<button id="btn-right" class="btn-right">
+								<i class="fa-solid fa-angle-right"></i>
+							</button>
 						</div>
-
-						<button id="btn-left" class="btn-left">
-							<i class="fa-solid fa-angle-left"></i>
-						</button>
-
-						<button id="btn-right" class="btn-right">
-							<i class="fa-solid fa-angle-right"></i>
-						</button>
 					</div>
 
 					<div class="textos">
@@ -791,7 +795,7 @@
 						<a href="" class="btn">LEARN MORE NOW <i class="fa-solid fa-arrow-right"></i></a>
 					</div>
 
-					<div>
+					<div class="div-img">
 						<img class="img" src="imagens/pessoa.png">
 					</div>
 					
@@ -818,56 +822,57 @@
 
 			<section class="secao-6">
 				<div class="container">
+					<div class="secao-6-cards">
+						<div class="card">
+							<div>
+								<span class="numero">1</span>
+							</div>
 
-					<div class="card">
-						<div>
-							<span class="numero">1</span>
+							<div class="texto">
+								<h3 class="titulo">Getting Started</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum ma Nullam id varius nunc.
+								</p>
+							</div>
 						</div>
 
-						<div class="texto">
-							<h3 class="titulo">Getting Started</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum ma Nullam id varius nunc.
-							</p>
+						<div class="card">
+							<div>
+								<span class="numero">2</span>
+							</div>
+							
+							<div class="texto">
+								<h3 class="titulo">Learn About Us</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit masbendum ma Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget
+								</p>
+							</div>
 						</div>
-					</div>
 
-					<div class="card">
-						<div>
-							<span class="numero">2</span>
+						<div class="card">
+							<div>
+								<span class="numero">3</span>
+							</div>
+							
+							<div class="texto">
+								<h3 class="titulo">View Our Projects</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bib
+								</p>
+							</div>
 						</div>
-						
-						<div class="texto">
-							<h3 class="titulo">Learn About Us</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit masbendum ma Nullam id varius nunc. Vivamus bibendum magna ex, et faucibus lacus venenatis eget
-							</p>
-						</div>
-					</div>
 
-					<div class="card">
-						<div>
-							<span class="numero">3</span>
-						</div>
-						
-						<div class="texto">
-							<h3 class="titulo">View Our Projects</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bib
-							</p>
-						</div>
-					</div>
-
-					<div class="card">
-						<div>
-							<span class="numero">4</span>
-						</div>
-						
-						<div class="texto">
-							<h3 class="titulo">Contact Us</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.
-							</p>
+						<div class="card">
+							<div>
+								<span class="numero">4</span>
+							</div>
+							
+							<div class="texto">
+								<h3 class="titulo">Contact Us</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.
+								</p>
+							</div>
 						</div>
 					</div>
 
@@ -923,10 +928,12 @@
 				</ul>
 			</div>
 
-			<div class="container">
+			<div class="">
 				<div class="footer-bottom">
 					<p>© Copyright 2022. All Rights Reserved.</p>
-					<button>^</button>
+					<button class="btn-aoTopo">
+						<i class="fa-solid fa-angle-up"></i>
+					</button>
 				</div>
 			</div>
 		</footer>
