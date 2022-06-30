@@ -1,8 +1,9 @@
 //Botão Abrir/Fechar Menu
 
 const btnHamburguer = document.querySelector('#btn-hambuguer')
+const menu = document.querySelector('.menu')
 btnHamburguer.addEventListener('click', ()=> {
-	document.querySelector('.menu').classList.toggle('active')
+	menu.classList.toggle('active')
 })
 
 //Sub Menu
@@ -26,8 +27,13 @@ const pesquisaClose = document.querySelector('#pesquisa-close')
 
 
 btnPesquisa.addEventListener('click', ()=> {
-	pesquisa.classList.toggle('active')
-	pesquisaInput.focus()
+	if(pesquisa.classList.contains('active')) {
+		pesquisa.classList.remove('active')
+		pesquisaInput.value = ''
+	} else {
+		pesquisa.classList.add('active')
+		pesquisaInput.focus()
+	}
 })
 
 pesquisaInput.addEventListener('keyup', (e)=> {
@@ -42,7 +48,10 @@ pesquisaClose.addEventListener('click', (e)=> {
 	pesquisaClose.classList.remove('active')
 	pesquisaInput.value = ''
 	pesquisaInput.focus()
-	
+})
+
+pesquisaInput.addEventListener('blur', (e) => {
+	if(e.target.value.length === 0) pesquisa.classList.remove('active')
 })
 
 //Carousel
@@ -70,40 +79,99 @@ $(document).ready(()=>{
 	})
 })
 
+//debounce
+
+const debounce = function(func, wait, immediate) {
+		let timeout;
+		return function(...args) {
+		const context = this;
+		const later = function () {
+		  timeout = null;
+		  if (!immediate) func.apply(context, args);
+		};
+		const callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+//Adicionando eventos no dropdown
+
+let btnDrop = document.querySelectorAll('.menu .item')
+
+const adicionarEventosDrop = () => {
+	btnDrop.forEach((item, i) => {
+		item.addEventListener('mouseenter', ()=> subMenu[i].classList.add('drop'))
+
+		item.addEventListener('mouseleave', ()=> subMenu[i].classList.remove('drop'))
+	})
+}
+
 //DropDown menu
 
-const ativarDropdown = function() {
+const tamanhoTela = function() {
     let tamanhoTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
     if (tamanhoTela >= 998) {
 
-        let btnDrop = document.querySelectorAll('.menu .item')
-        btnDrop.forEach((item, i) => {
-        	item.addEventListener('mouseenter', ()=>{
-        		subMenu[i].classList.add('drop')
-        	})
+    	//Dropdown menu
 
-        	item.addEventListener('mouseleave', ()=> {
-        		subMenu[i].classList.remove('drop')
-        	})
-        })
+        adicionarEventosDrop()
+
+        //Evento scroll
+
+		function ativarScroll(){
+			document.addEventListener('scroll', debounce(function(){
+				animarElemento()
+				btnIrTopo()
+		}, 100))
+
+			animarElemento()
+			btnIrTopo()
+		}
+
+		ativarScroll()
+
+		//Retirando transição do menu
+
+		menu.classList.add('no-transition')
+
+    } else {
+    	menu.classList.remove('no-transition')
     }
 }
 
-ativarDropdown()
+//Entrada suave elementos
 
-window.onresize = ativarDropdown
+const elementosEntrada = document.querySelectorAll('[data-animacao]')
 
-//Botão ir ao topo 
+const animarElemento = ()=> {
+	elementosEntrada.forEach(item => {
+		const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+
+		if(windowTop > item.offsetTop) {
+			item.classList.add('animar')
+		}
+	})
+}
+
+//Botão ir ao topo
 
 const btnAoTopo = document.querySelector('.btn-aoTopo')
 
-document.addEventListener('scroll', (e)=> {
+const btnIrTopo = ()=> {
 	let posicao = window.pageYOffset
 	if(posicao > 100) {
 		btnAoTopo.classList.add('visible')
 	} else {
 		btnAoTopo.classList.remove('visible')
 	}
-})
+}
 
 btnAoTopo.addEventListener('click', ()=> $('html, body').animate({scrollTop:0}, 'slow'))
+
+//Ativando as funções
+
+tamanhoTela()
+
+window.addEventListener("resize",debounce(tamanhoTela, 100))

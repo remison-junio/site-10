@@ -18,6 +18,10 @@ header {
 	overflow: hidden;
 }
 
+header .navegacao {
+	position: relative;
+}
+
 .container {
 	padding: 0 13px;
 	margin-left: auto;
@@ -53,8 +57,11 @@ header {
 	display: none;
 }
 
+.menu.no-transition {
+	transition: 0s;
+}
+
 .menu.active {
-	transition: .3s;
 	max-height: 400px;
 	visibility: visible;
 }
@@ -64,32 +71,31 @@ header {
 	padding: 0;
 }
 
-.menu .titulo .texto {
+.menu .titulo .btn-sub {
 	color: #3251FC;
 	font-size: 13px;
 	font-weight: 700;
-	display: block;
+	display: flex;
 	padding: 7px;
 	width: 100%;
+	justify-content: space-between;
 }
 
 .menu .titulo .icone, .sub-menu .sub-menu-titulo .icone {
-	width: 30px;
 	color: #3251FC;
 	display: flex;
+	margin: auto 0;
 }
 
 .menu .titulo .icone i, .sub-menu .sub-menu-titulo i {
-	margin: auto;
 	font-size: 12px;
 }
 
 .menu .titulo.principal {
 	background: #3251FC;
-
 }
 
-.menu .titulo.principal .texto, .menu .titulo.principal .icone {
+.menu .titulo.principal .btn-sub, .menu .titulo.principal .icone {
 	color: white;
 }
 
@@ -123,9 +129,13 @@ header {
 
 .botoes .pesquisa .campo {
 	display: none;
-	padding: 0;
-	position: relative;
-	margin-right: 20px;
+	padding: 5px;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: auto;
+	top: 100px;
+	background-color: rgba(0, 0, 0, .2);
 }
 
 .botoes .pesquisa.active .campo {
@@ -137,8 +147,12 @@ header {
 	position: absolute;
 	right: 0;
 	top: 0;
+	bottom: 0;
 	font-size: 11px;
 	color: #3251FC;
+	background: transparent;
+	cursor: pointer;
+	padding: 0 15px;
 }
 
 .botoes .pesquisa.active .campo .close.active {
@@ -146,9 +160,10 @@ header {
 }
 
 .botoes .pesquisa.active .campo input {
-	right: 75px;
-	width: 200px;
+	padding-right: 20px;
 	font-size: 12px;
+	background: transparent;
+	width: 100%;
 }
 
 .botoes .pesquisa.active .campo input:focus {
@@ -193,16 +208,13 @@ header {
 	transition: .2s;
 }
 
-.sub-menu .sub-menu-titulo .titulo:hover {
-	
-}
-
 /*Seção 1*/
 
 .secao-1 {
 	display: grid;
 	grid-row-gap: 15px;
 	padding-bottom: 15px;
+	overflow-x: hidden;
 }
 
 .secao-1 .card {
@@ -531,7 +543,7 @@ header {
 }
 
 .secao-6 .citacao blockquote {
-	padding: 50px 60px 60px;
+	padding: 50px 20px 60px;
 	background: #4b66fc;
 	color: white;
 	text-align: center;
@@ -665,7 +677,7 @@ footer .footer-bottom .btn-aoTopo {
 	border-radius: 4px 4px 0 0;
 	cursor: pointer;
 	position: fixed;
-	bottom: 0;
+	bottom: 10px;
 	right: 10px;
 	color: white;
 	background: #404040;
@@ -684,6 +696,27 @@ footer .footer-bottom .btn-aoTopo:hover {
 }
 
 /*Responsividade*/
+
+@media (min-width: 480px) {
+
+	.botoes .pesquisa {
+		position: relative;
+	}
+
+	.botoes .pesquisa .campo {
+		right: 70px;
+		left: auto;
+		top: -5px;
+	}
+
+	.botoes .pesquisa.active .campo input {
+		width: 170px;
+	}
+
+	.secao-6 .citacao blockquote {
+		padding: 50px 60px 60px;
+	}
+}
 
 @media (min-width: 590px){
 	.container {
@@ -822,7 +855,6 @@ footer .footer-bottom .btn-aoTopo:hover {
 		grid-template-columns: 1fr 1fr 1fr;
 		column-gap: 0px;
 	}
-
 }
 
 @media (min-width: 998px) {
@@ -858,7 +890,7 @@ footer .footer-bottom .btn-aoTopo:hover {
 		display: none;
 	}
 
-	.menu {
+	.menu, .menu.active {
 		display: flex;
 		visibility: visible;
 		height: 130px;
@@ -878,7 +910,7 @@ footer .footer-bottom .btn-aoTopo:hover {
 		height: 100%;
 	}
 
-	.menu .titulo .texto {
+	.menu .titulo .btn-sub {
 		color: #444444;
 		font-size: 12px;
 		font-weight: 600;
@@ -894,7 +926,7 @@ footer .footer-bottom .btn-aoTopo:hover {
 		background: white;
 	}
 
-	.menu .titulo.principal .texto, .menu .titulo.principal .icone {
+	.menu .titulo.principal .btn-sub, .menu .titulo.principal .icone {
 		color: #444444;
 	}
 
@@ -921,27 +953,27 @@ footer .footer-bottom .btn-aoTopo:hover {
 		position: relative;
 	}
 
+	.botoes .pesquisa {
+		position: static;
+	}
+
 	.botoes .btn-pesquisa {
 		margin-right: 15px;
 	}
 
-	.botoes .pesquisa.active .campo {
-		position: absolute;
+	.botoes .pesquisa .campo {
+		left: 0;
+		top: auto;
+		background: white;
+		padding: 10px 20px 10px 15px;
 		bottom: -20px;
 		z-index: 1000;
-		background: white;
-		padding: 20px;
 		width: 300px;
 	}
 
 	.botoes .pesquisa.active .campo input {
 		width: 100%;
-	}
-
-	.botoes .pesquisa.active .campo .close {
-		right: 20px;
-		top: 15px;
-		bottom: 15px;	
+		font-size: 15px;
 	}
 
 	.sub-menu {
@@ -1091,6 +1123,44 @@ footer .footer-bottom .btn-aoTopo:hover {
 	footer .footer-bottom .btn-aoTopo.visible {
 		opacity: 1;
 		visibility: visible;
+	}
+
+	[data-animacao] {
+		transition: .7s;
+		opacity: 0;
+	}
+
+	[data-animacao="bottom"] {
+		transform: translateY(50px);
+	}
+
+	[data-dalay="2"] {
+		transition-delay: .2s;
+	}
+
+	[data-dalay="3"] {
+		transition-delay: .4s;
+	}
+
+	[data-dalay="4"] {
+		transition-delay: .6s;
+	}
+
+	[data-animacao="top"] {
+		transform: translateY(-50px);
+	}
+
+	[data-animacao="left"] {
+		transform: translateX(-100px);
+	}
+
+	[data-animacao="right"] {
+		transform: translateX(100px);
+	}
+
+	[data-animacao].animar {
+		opacity: 1;
+		transform: translate(0);
 	}
 }
 
